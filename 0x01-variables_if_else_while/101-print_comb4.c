@@ -11,30 +11,22 @@ int main(void)
 	int d;
 	int e;
 
-	while (e < 10)
+	for (c = 0; c < 10; c++)
 	{
-		d = 10;
-		while (d < 10)
+		for (d = 0; d < 10; d++)
 		{
-			c = 10;
-			while (c < 10)
+			for (c = 0; c < 10; c++)
 			{
-				if (c != d && d != e && e < d && d < c)
-				{
-					putchar('0' + e);
-					putchar('0' + d);
-					putchar('0' + c);
-					if (c + d + e != 9 + 8 + 7)
+				putchar(c + '0');
+				putchar(d + '0');
+				putchar(e + '0');
+				if (c != 7 || d != 8 || e != 9)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				c++;
 			}
-			d++;
-		}
-		e++;
 	}
 	putchar('\n');
 	return (0);
