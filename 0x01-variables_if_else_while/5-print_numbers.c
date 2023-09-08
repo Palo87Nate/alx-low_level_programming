@@ -4,13 +4,14 @@
 /**
  * main - prints all single digit numbers of base 10
  *
- * return: 0
+ * Return: 0
  */
 
 int main(void)
 {
 	char c = '0';
 	int i = 0;
+
 	while (i < 10)
 	{
 		putchar(c);

@@ -4,13 +4,14 @@
 /**
  * main - prints the numbers of base 16
  *
- * return: 0
+ * Return: 0
  */
 
 int main(void)
 {
 	char c = 'a';
 	int i = 48;
+
 	while (i < 58)
 	{
 		putchar(i);

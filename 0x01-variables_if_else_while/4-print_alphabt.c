@@ -4,13 +4,14 @@
 /**
  * main - prints the alphabet (except e and q) in lowrcase
  *
- * return: 0
+ * Return: 0
  */
 
 int main(void)
 {
 	char c = 'a';
 	int i = 0;
+
 	while (i < 26)
 	{
 		if (c != 'q' && c != 'e')

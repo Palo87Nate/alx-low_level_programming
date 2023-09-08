@@ -4,13 +4,14 @@
 /**
  * main - prints the alphabet in lowercase reversed
  *
- * return: 0
+ * Return: 0
  */
 
 int main(void)
 {
 	char c = 'z';
 	int i = 26;
+
 	while (i > 0)
 	{
 		putchar(c);
