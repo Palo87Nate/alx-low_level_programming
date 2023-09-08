@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar(c);
 		c++;
-		i++,
+		i++;
 	}
 	c = 'A';
 	i = 0;
