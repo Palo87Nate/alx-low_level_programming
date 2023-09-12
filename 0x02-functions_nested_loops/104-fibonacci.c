@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <gmp.h>
 /**
  * main -  finds and prints the first 98 Fibonacci numbers, starting with 1 and 2,
  * followed by a new line
@@ -8,19 +7,25 @@
  */
 int main(void)
 {
-    int i = 0;
-    unsigned long long int a = 0, b = 1, next = 0;
+    int i;
+    mpz_t a, b, next;
 
-    while (i < 98)
+    mpz_init(a);
+    mpz_init_set_ui(b, 1);
+    mpz_init(next);
+    for (i = 0; i < 98; i++) 
     {
-        next = a + b;
-        a = b;
-        b = next;
-        printf("%llu", next);
+        mpz_add(next, a, b);
+        mpz_set(a, b);
+        mpz_set(b, next);
+
+        mpz_out_str(stdout, 10, next);
         if (i < 97)
             printf(", ");
-        i++;
     }
-    putchar('\n');
-    return (0);
+    printf("\n");
+    mpz_clear(a);
+    mpz_clear(b);
+    mpz_clear(next);
+    return 0;
 }
