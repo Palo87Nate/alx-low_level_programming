@@ -5,27 +5,26 @@
  * followed by a new line
  * Return: 0
  */
-int main(void)
-{
-    int i;
-    mpz_t a, b, next;
+int main() {
+    int a = 1, b = 2, c;
+    int count = 2;
 
-    mpz_init(a);
-    mpz_init_set_ui(b, 1);
-    mpz_init(next);
-    for (i = 0; i < 98; i++) 
+    printf("%d, %d, ", a, b);
+    while (count < 98)
     {
-        mpz_add(next, a, b);
-        mpz_set(a, b);
-        mpz_set(b, next);
+        c = a + b;
+        a = b;
+        b = c;
 
-        mpz_out_str(stdout, 10, next);
-        if (i < 97)
-            printf(", ");
+        count++;
+        if (count == 98)
+	{
+            printf("%d\n", c);
+        }
+	else
+	{
+            printf("%d, ", c);
+        }
     }
-    printf("\n");
-    mpz_clear(a);
-    mpz_clear(b);
-    mpz_clear(next);
-    return 0;
+    return (0);
 }
