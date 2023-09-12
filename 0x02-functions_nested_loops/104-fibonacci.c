@@ -1,30 +1,24 @@
 #include <stdio.h>
-#include <gmp.h>
 /**
  * main -  finds and prints the first 98 Fibonacci numbers, starting with 1 and 2,
  * followed by a new line
  * Return: 0
  */
-int main() {
-    long long a = 1, b = 2, c;
-    int count = 2;
+int main(void)
+{
+	int i = 0;
+	unsigned long int a = 0, b = 1, next = 0;
 
-    printf("%d, %d, ", a, b);
-    while (count < 98)
-    {
-        c = a + b;
-        a = b;
-        b = c;
-
-        count++;
-        if (count == 98)
+	while (i < 98)
 	{
-            printf("%lld\n", c);
-        }
-	else
-	{
-            printf("%lld, ", c);
-        }
-    }
-    return (0);
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
+		if (i < 97)
+			printf(", ");
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }
