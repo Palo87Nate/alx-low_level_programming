@@ -6,7 +6,7 @@
  * Return: 0
  */
 int main() {
-    int a = 1, b = 2, c;
+    long long a = 1, b = 2, c;
     int count = 2;
 
     printf("%d, %d, ", a, b);
@@ -19,11 +19,11 @@ int main() {
         count++;
         if (count == 98)
 	{
-            printf("%d\n", c);
+            printf("%lld\n", c);
         }
 	else
 	{
-            printf("%d, ", c);
+            printf("%lld, ", c);
         }
     }
     return (0);
