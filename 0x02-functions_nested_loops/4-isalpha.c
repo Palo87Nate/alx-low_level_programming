@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
+
 /**
  * _isalpha - checks for lower case letter
  * 
