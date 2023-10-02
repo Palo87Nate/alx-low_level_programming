@@ -1,22 +1,13 @@
 #include "main.h"
+
 /**
- * *_strcat - concatenates two strings
- * @dest: pointer destination
- * @src: pointer source
- * Return: void
-*/
+ * _isdigit - check for a digit
+ * @c : character to check
+ * Return:0 or 1
+ */
 
-char *_strcat(char *dest, char *src)
+int _isdigit(int c)
 {
-int a = -1, i;
-for (i = 0; dest[i] != '\0'; i++)
-;
+	return (c >= 48 && c <= 57);
 
-do {
-	a++;
-	dest[i] = src[a];
-	i++;
-} while (src[a] != '\0');
-
-return (dest);
 }
