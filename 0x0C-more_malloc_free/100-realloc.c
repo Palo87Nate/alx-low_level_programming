@@ -25,7 +25,6 @@ void _memcpy(void *dest, void *src, size_t n)
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *newPtr;
-
 	if (new_size == 0)
 	{
 		if (ptr != NULL)
@@ -50,5 +49,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		}
 		return (newPtr);
 	}
-	return (0);
+	return (ptr);
 }
